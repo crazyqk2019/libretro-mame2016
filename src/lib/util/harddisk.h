@@ -21,14 +21,18 @@
     TYPE DEFINITIONS
 ***************************************************************************/
 
-struct hard_disk_file;
-
 struct hard_disk_info
 {
 	UINT32          cylinders;
 	UINT32          heads;
 	UINT32          sectors;
 	UINT32          sectorbytes;
+};
+
+struct hard_disk_file
+{
+	chd_file *          chd;                /* CHD file */
+	hard_disk_info      info;               /* hard disk info */
 };
 
 
