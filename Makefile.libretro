@@ -156,8 +156,14 @@ ifeq ($(platform),win)
 	ifeq ($(MSYSTEM),MINGW64)
 		MINGW64 ?= /mingw64
 		PLATFLAGS += MINGW64="$(MINGW64)"
+	else ifeq ($(MSYSTEM),UCRT64)
+		MINGW64 ?= /ucrt64
+		PLATFLAGS += MINGW64="$(MINGW64)"
 	else ifeq ($(MSYSTEM),MINGW32)
 		MINGW32 ?= /mingw32
+		PLATFLAGS += MINGW32="$(MINGW32)"
+	else ifeq ($(MSYSTEM),UCRT32)
+		MINGW32 ?= /ucrt32
 		PLATFLAGS += MINGW32="$(MINGW32)"
 	endif
 endif
