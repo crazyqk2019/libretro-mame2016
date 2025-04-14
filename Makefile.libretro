@@ -162,9 +162,6 @@ ifeq ($(platform),win)
 	else ifeq ($(MSYSTEM),MINGW32)
 		MINGW32 ?= /mingw32
 		PLATFLAGS += MINGW32="$(MINGW32)"
-	else ifeq ($(MSYSTEM),UCRT32)
-		MINGW32 ?= /ucrt32
-		PLATFLAGS += MINGW32="$(MINGW32)"
 	endif
 endif
 ifneq ($(LIBRETRO_CPU),)
